@@ -1,0 +1,38 @@
+/*Changes default highlight color of chrome*/
+::selection {
+  background: rgb(186, 183, 182);
+}
+
+body{
+	background-image: url(https://www.desktopbackground.org/download/1600x900/2011/05/15/203631_gallery-for-parkour-full-hd-wallpapers_1920x1080_h.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#name{
+	text-align: center;
+	margin-top:20%;
+	color:white;
+}
+
+h4{
+	margin-top:10px;
+	font-family: 'Yellowtail', cursive;
+	text-align: center;
+	color:white;
+}
+
+/*@media (max-aspect-ratio:16/9){
+	body{
+		width:100%;
+		height:auto;
+	}
+}
+
+@media (max-aspect-ratio:16/9){
+	body{
+		width:auto;
+		height:100%;
+	}
+}*/

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+nav{
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+#underline{
+    text-decoration: none;
+}
+
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 16px 5px 0px 5px;
+}
+
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+  text-decoration: none;
+}
+
+#loggedin{
+  color:white;
+}
+#loggedin:hover{
+  color:black;
+}
+
+/*=================HAMBURGER====================*/
+
+
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  /* Changes hamburger to 'cross' when clicked */
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+
+  /*Causes the hamburger menu to ease out from left*/
+  nav ul{
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+   /*Causes the hamburger menu to ease out from left*/
+  #click:checked ~ ul{
+    left: 0;
+  }
+  
+  nav ul li{
+    width: 100%;
+    margin: 45px 0;
+  }
+
+  /*Hamburger menu animation*/
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  /*Hamburger menu animation*/
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+
+  #loggedin:hover{
+    color:cyan;
+  }
+}
